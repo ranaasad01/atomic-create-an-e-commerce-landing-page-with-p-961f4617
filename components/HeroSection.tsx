@@ -39,7 +39,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg text-violet-100 max-w-md leading-relaxed">
-              Curated collections across electronics, fashion, home, and beauty — all at prices that make you smile. Free shipping on orders over $50.
+              Curated collections across electronics, fashion, home, and beauty — all at prices that make you smile. Free shipping on orders over $55.
             </p>
 
             <div className="flex flex-wrap gap-4">
