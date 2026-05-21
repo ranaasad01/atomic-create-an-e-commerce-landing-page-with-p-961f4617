@@ -79,13 +79,13 @@ export default function HeroSection() {
           </div>
 
           <div className="hidden lg:grid grid-cols-2 gap-4">
-            {FEATURES.map((item) => (
+            {FEATURES.map((item, index) => (
               <div
                 key={item.label}
                 className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:border-white/20 transition-all duration-200 hover:-translate-y-1"
               >
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-white">{item.label}</h3>
+                <h3 className="font-bold text-white">{index === 0 ? "Free Shipping and discount" : item.label}</h3>
                 <p className="text-sm text-violet-200 mt-1">{item.sub}</p>
               </div>
             ))}
