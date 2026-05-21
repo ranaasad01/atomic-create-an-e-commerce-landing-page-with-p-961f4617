@@ -36,6 +36,7 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
               <div>
                 <div>
                   <div>
+                    <h3>Free Shipping and discount</h3>
                     <span>Feature</span>
                   </div>
                 </div>

@@ -68,7 +68,7 @@ export default function HomePage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { label: "Free Shipping", sub: "Orders over $50", bg: "bg-violet-50", text: "text-violet-700", icon: "🚚" },
+              { label: "Free Shipping and discount", sub: "Orders over $50", bg: "bg-violet-50", text: "text-violet-700", icon: "🚚" },
               { label: "Summer Sale", sub: "Up to 40% off", bg: "bg-amber-50", text: "text-amber-700", icon: "☀️" },
               { label: "New Arrivals", sub: "Fresh this week", bg: "bg-emerald-50", text: "text-emerald-700", icon: "✨" },
               { label: "Top Rated", sub: "4.5+ star picks", bg: "bg-rose-50", text: "text-rose-700", icon: "⭐" },
