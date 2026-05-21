@@ -28,25 +28,39 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-      {products.map((product, index) => {
-        if (index === 1) {
-          return (
-            <div key={product.id}>
-              <div>
+    <section id="products">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {products.map((product, index) => {
+          if (index === 1) {
+            return (
+              <div key={product.id}>
                 <div>
                   <div>
-                    <h3>Free Shipping and discount</h3>
-                    <span>Feature</span>
+                    <div>
+                      <h3>Free Shipping and discount</h3>
+                      <span>Feature</span>
+                    </div>
                   </div>
                 </div>
+                <ProductCard product={product} />
               </div>
-              <ProductCard product={product} />
-            </div>
-          );
-        }
-        return <ProductCard key={product.id} product={product} />;
-      })}
-    </div>
+            );
+          }
+          if (index === 4) {
+            return (
+              <div key={product.id}>
+                <div>
+                  <div>
+                    <img style={{ backgroundColor: "#ffffff", color: "#a93d3d" }} />
+                  </div>
+                </div>
+                <ProductCard product={product} />
+              </div>
+            );
+          }
+          return <ProductCard key={product.id} product={product} />;
+        })}
+      </div>
+    </section>
   );
 }

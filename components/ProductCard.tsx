@@ -53,6 +53,7 @@ export default function ProductCard({ product, cardIndex }: ProductCardProps) {
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          {...(isTargetCard ? { style: { backgroundColor: "#ffffff", color: "#a93d3d" } } : {})}
         />
 
         {/* Badges */}
