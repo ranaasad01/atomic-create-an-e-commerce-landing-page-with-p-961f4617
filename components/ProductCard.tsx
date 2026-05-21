@@ -1,13 +1,15 @@
 "use client";
 
-import { ShoppingCart, Heart } from 'lucide-react';
 import { useState } from "react";
+import { ShoppingCart, Heart } from 'lucide-react';
+
 import { Product } from "@/lib/types";
 import { useCart } from "@/context/CartContext";
 import StarRating from "./StarRating";
 
 interface ProductCardProps {
   product: Product;
+  cardIndex?: number;
 }
 
 const BADGE_STYLES: Record<string, string> = {
@@ -24,7 +26,7 @@ const BADGE_LABELS: Record<string, string> = {
   featured: "Featured",
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, cardIndex }: ProductCardProps) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
   const [wishlisted, setWishlisted] = useState(false);
@@ -39,6 +41,9 @@ export default function ProductCard({ product }: ProductCardProps) {
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
+
+  // cardIndex is 1-based; target is 3rd card (index 2), content block child 2 (index 1), first div (index 0), second child (index 1), first span (index 0)
+  const isTargetCard = cardIndex === 3;
 
   return (
     <div className="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col">
@@ -95,8 +100,11 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">
-            <span className="text-lg font-extrabold text-slate-900">${product.price.toFixed(2)}</span>
-            {product.originalPrice && (
+            <span className="text-lg font-extrabold text-slate-900">{isTargetCard ? "Feature" : `$${product.price.toFixed(2)}`}</span>
+            {!isTargetCard && product.originalPrice && (
+              <span className="text-sm text-slate-400 line-through">${product.originalPrice.toFixed(2)}</span>
+            )}
+            {isTargetCard && product.originalPrice && (
               <span className="text-sm text-slate-400 line-through">${product.originalPrice.toFixed(2)}</span>
             )}
           </div>

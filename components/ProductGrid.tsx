@@ -29,9 +29,23 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {products.map((product, index) => {
+        if (index === 1) {
+          return (
+            <div key={product.id}>
+              <div>
+                <div>
+                  <div>
+                    <span>Feature</span>
+                  </div>
+                </div>
+              </div>
+              <ProductCard product={product} />
+            </div>
+          );
+        }
+        return <ProductCard key={product.id} product={product} />;
+      })}
     </div>
   );
 }
