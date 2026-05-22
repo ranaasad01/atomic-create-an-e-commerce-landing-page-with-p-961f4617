@@ -87,7 +87,9 @@ export default function HomePage() {
         {/* Products Section */}
         <section id="products" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>☀️Summer SaleUp</div>
+            <div>
+              <p>New</p>
+            </div>
 
             <div className="flex items-center gap-3">
               <SlidersHorizontal className="w-4 h-4 text-slate-400 flex-shrink-0" />

@@ -86,7 +86,7 @@ export default function HeroSection() {
               >
                 <div className="text-3xl mb-3">{item.icon}</div>
                 <h3 className="font-bold text-white">{index === 0 ? "Free Shipping and discount" : item.label}</h3>
-                <p className="text-sm text-violet-200 mt-1">{index === 1 ? "☀️Summer SaleUp" : item.sub}</p>
+                <p className="text-sm text-violet-200 mt-1">{index === 1 ? "New" : item.sub}</p>
               </div>
             ))}
           </div>
