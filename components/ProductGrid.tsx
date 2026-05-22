@@ -55,7 +55,7 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
                 <div>
                   <div>
                     <div>
-                      <a style={{ backgroundColor: "#7c3aed", color: "#c32828" }}></a>
+                      <a style={{ backgroundColor: "#7c3aed", color: "#b50d0d" }}></a>
                     </div>
                   </div>
                 </div>
