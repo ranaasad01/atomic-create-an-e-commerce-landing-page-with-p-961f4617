@@ -132,7 +132,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {featuredProducts.slice(0, 4).map((product, index) => (
                   index === 0 ? (
-                    <div key={product.id} style={{ backgroundColor: "#ffffff", color: "#2769d3" }}>
+                    <div key={product.id} style={{ backgroundColor: "#ffffff" }}>
                       <ProductCard product={product} />
                     </div>
                   ) : (
