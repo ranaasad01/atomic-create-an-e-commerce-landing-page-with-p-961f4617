@@ -116,7 +116,7 @@ export default function ProductCard({ product, cardIndex }: ProductCardProps) {
 
         <a
           onClick={handleAddToCart}
-          style={isTargetCard ? { backgroundColor: "#7c3aed", color: "#e13737" } : undefined}
+          style={isTargetCard ? { backgroundColor: "#7c3aed", color: "#c32828" } : undefined}
           className={
             "w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 " +
             (added
