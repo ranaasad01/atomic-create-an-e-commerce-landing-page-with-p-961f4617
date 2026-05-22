@@ -92,7 +92,10 @@ export default function ProductCard({ product, cardIndex }: ProductCardProps) {
       <div className="p-4 flex flex-col flex-1 gap-3">
         <div className="flex-1">
           <p className="text-xs text-violet-600 font-semibold uppercase tracking-wide mb-1">{product.category}</p>
-          <h3 className="text-sm font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-violet-700 transition-colors">
+          <h3
+            className="text-sm font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-violet-700 transition-colors"
+            {...(isTargetCard ? { style: { backgroundColor: "#ffffff", color: "#2769d3" } } : {})}
+          >
             {isTargetCard ? "Free Shipping and discount" : product.name}
           </h3>
         </div>

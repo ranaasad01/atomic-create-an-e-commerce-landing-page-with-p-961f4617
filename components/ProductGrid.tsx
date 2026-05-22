@@ -40,6 +40,9 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
                       <h3>Free Shipping and discount</h3>
                       <span>Feature</span>
                     </div>
+                    <div>
+                      <h3 style={{ backgroundColor: "#ffffff", color: "#2769d3" }}>Free Shipping and discount</h3>
+                    </div>
                   </div>
                 </div>
                 <ProductCard product={product} />
