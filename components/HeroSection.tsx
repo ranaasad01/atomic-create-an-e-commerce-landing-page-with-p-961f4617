@@ -38,7 +38,7 @@ export default function HeroSection() {
               You&apos;ll Love
             </h1>
 
-            <p className="text-lg text-violet-100 max-w-md leading-relaxed">
+            <p style={{ backgroundColor: '#7c3aed', color: '#d31d1d' }} className="text-lg text-violet-100 max-w-md leading-relaxed">
               Curated collections across electronics, fashion, home, and beauty — all at prices that make you smile. Free shipping on orders over $55.
             </p>
 
