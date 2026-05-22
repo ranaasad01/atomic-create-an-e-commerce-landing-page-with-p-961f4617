@@ -34,7 +34,7 @@ export default function HeroSection() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
               Discover
-              <span className="block text-amber-400">Premium Picks</span>
+              <span style={{ backgroundColor: '#ffffff', color: '#cb2525' }} className="block text-amber-400">Premium Picks</span>
               You&apos;ll Love
             </h1>
 
