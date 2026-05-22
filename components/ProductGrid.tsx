@@ -49,6 +49,20 @@ export default function ProductGrid({ products, searchQuery, activeCategory }: P
               </div>
             );
           }
+          if (index === 3) {
+            return (
+              <div key={product.id}>
+                <div>
+                  <div>
+                    <div>
+                      <a style={{ backgroundColor: "#7c3aed", color: "#e13737" }}></a>
+                    </div>
+                  </div>
+                </div>
+                <ProductCard product={product} />
+              </div>
+            );
+          }
           if (index === 4) {
             return (
               <div key={product.id}>
