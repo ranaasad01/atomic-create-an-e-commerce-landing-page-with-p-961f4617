@@ -20,7 +20,7 @@ export default function CartItem({ item }: CartItemProps) {
     <div className="flex gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
       <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden bg-slate-50">
         <img
-          src="/images/uploaded-1779433846741.png"
+          src="https://titoaistorageaccount.blob.core.windows.net/titoai-storage/961f4617-69d7-4026-9ac7-678a57d7cc65/images/uploaded-1779457303549-wbyv2a.png"
           alt={product.name}
           className="w-full h-full object-cover"
         />
